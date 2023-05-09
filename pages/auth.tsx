@@ -5,6 +5,12 @@ import axios from "axios";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
+
+import background from "../public/images/hero.jpg";
+import logo from "../public/images/logo.png";
+
 const Auth = () => {
   const router = useRouter();
 
@@ -51,17 +57,18 @@ const Auth = () => {
 
   return (
     <>
-      <Image
-        src={"/images/hero.jpg"}
-        alt="background"
-        fill
-        style={{ objectFit: "cover" }}
-        className="-z-10"
-      />
-      <div className="relative top-0 left-0">
+      <div className="absolute -z-10 h-full w-full">
+        <Image
+          src={background}
+          alt="background"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+      <div className="relative">
         <div className="bg-black lg:bg-opacity-50 h-screen">
           <nav className="px-12 py-5">
-            <Image src="/images/logo.png" alt="Logo" width={200} height={0} />
+            <Image src={logo} priority alt="Logo" className="w-[200px]" />
           </nav>
           <div className="flex justify-center">
             <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
@@ -109,6 +116,51 @@ const Auth = () => {
               >
                 {variant === "login" ? "Login" : "Sign up"}
               </button>
+              <div
+                className="
+                  flex
+                  flex-row
+                  items-center
+                  gap-4
+                  mt-8
+                  justify-center
+                "
+              >
+                <div
+                  onClick={() => signIn("google", { callbackUrl: "/" })}
+                  className="
+                    w-10
+                    h-10
+                    bg-white
+                    rounded-full
+                    flex
+                    items-center
+                    justify-center
+                    cursor-pointer
+                    hover:opacity-80
+                    transition
+                  "
+                >
+                  <FcGoogle size={30} />
+                </div>
+                <div
+                  onClick={() => signIn("github", { callbackUrl: "/" })}
+                  className="
+                    w-10
+                    h-10
+                    bg-white
+                    rounded-full
+                    flex
+                    items-center
+                    justify-center
+                    cursor-pointer
+                    hover:opacity-80
+                    transition
+                  "
+                >
+                  <FaGithub size={30} />
+                </div>
+              </div>
               <p className="text-neutral-500 mt-12">
                 {variant === "login"
                   ? "First time using Netflix?"
