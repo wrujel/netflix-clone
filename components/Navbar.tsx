@@ -47,9 +47,7 @@ const Navbar = () => {
           items-center
           transition
           duration-500
-          ease-in-out
-          bg-zinc-900
-          bg-opacity-90
+          ease-in-out     
           ${showBackground ? "bg-zinc-900 bg-opacity-90" : ""}
         `}
       >
