@@ -8,7 +8,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
 import background from "../public/images/hero.jpg";
-import logo from "../public/images/logo.png";
+import Logo from "../components/Logo";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -62,7 +62,9 @@ const Auth = () => {
       <div className="relative">
         <div className="bg-black lg:bg-opacity-50 h-screen">
           <nav className="px-12 py-5">
-            <Image src={logo} priority alt="Logo" className="w-[200px]" />
+            <div className="w-[200px]">
+              <Logo />
+            </div>
           </nav>
           <div className="flex justify-center">
             <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">

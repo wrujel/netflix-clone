@@ -4,6 +4,7 @@ import Image from "next/image";
 import avatar from "../public/images/default-blue.png";
 import useCurrentUser from "../hooks/useCurrentUser";
 import { useRouter } from "next/navigation";
+import Avatar from "../components/Avatar";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -50,7 +51,7 @@ const Profiles = () => {
                   overflow-hidden
                 "
               >
-                <Image src={avatar} alt="avatar" />
+                <Avatar />
               </div>
               <div
                 className="
