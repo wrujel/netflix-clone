@@ -10,7 +10,7 @@ export default async function handler(
 ) {
   try {
     if (req.method === "POST") {
-      const { currentUser } = await serverAuth(req, res);
+      const { user } = await serverAuth(req, res);
 
       const { movieId } = req.body;
 
@@ -24,9 +24,9 @@ export default async function handler(
         throw new Error("Invalid ID");
       }
 
-      const user = await prismadb.user.update({
+      const currentUser = await prismadb.user.update({
         where: {
-          email: currentUser.email || "",
+          email: user.email || "",
         },
         data: {
           favoriteIds: {
@@ -35,11 +35,11 @@ export default async function handler(
         },
       });
 
-      return res.status(200).json(user);
+      return res.status(200).json(currentUser);
     }
 
     if (req.method === "PATCH") {
-      const { currentUser } = await serverAuth(req, res);
+      const { user } = await serverAuth(req, res);
 
       const { movieId } = req.body;
 
@@ -53,11 +53,11 @@ export default async function handler(
         throw new Error("Invalid ID");
       }
 
-      const updatedFavoriteIds = without(currentUser.favoriteIds, movieId);
+      const updatedFavoriteIds = without(user.favoriteIds, movieId);
 
       const updatedUser = await prismadb.user.update({
         where: {
-          email: currentUser.email || "",
+          email: user.email || "",
         },
         data: {
           favoriteIds: updatedFavoriteIds,
