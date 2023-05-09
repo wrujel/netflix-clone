@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Input from "../components/Input";
 import { useCallback, useState } from "react";
+import axios from "axios";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -14,6 +15,18 @@ const Auth = () => {
       currentVariant === "login" ? "register" : "login"
     );
   }, []);
+
+  const register = useCallback(async () => {
+    try {
+      await axios.post("/api/register", {
+        email,
+        name,
+        password,
+      });
+    } catch (error: any) {
+      throw new Error(error);
+    }
+  }, [email, name, password]);
 
   return (
     <>
@@ -60,6 +73,7 @@ const Auth = () => {
                 />
               </div>
               <button
+                onClick={register}
                 className="
                   bg-red-600
                   py-3
@@ -69,6 +83,7 @@ const Auth = () => {
                   mt-10
                   hover-bg-red-700
                   transition
+                  translate-y-0.5
                 "
               >
                 {variant === "login" ? "Login" : "Sign up"}
