@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BsFillPlayFill } from "react-icons/bs";
+import FavoriteButton from "./FavoriteButton";
 
 interface MovieCardProps {
   data: Record<string, any>;
@@ -80,6 +81,11 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             shadow-md
             rounded-b-md
             duration-200
+            flex
+            flex-col
+            justify-between
+            items-start
+            gap-4
           "
         >
           <div className="flex flex-row items-center gap-3">
@@ -102,13 +108,19 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             >
               <BsFillPlayFill size={30} />
             </div>
-            <p className="text-green-400 font-semibold ml-2">
-              New <span className="text-white">2023</span>
-            </p>
-            <div className="flex flex-row ml-3 gap-2 items-center">
-              <p className="text-white text-[10px] lg:text-sm">
-                {data.duration}
-              </p>
+            <FavoriteButton movieId={data.id} />
+          </div>
+          <p className="text-green-400 font-semibold">
+            New <span className="text-white">2023</span>
+          </p>
+          <div className="flex flex-row">
+            <div className="text-white">
+              <ul className="list-disc list-inside flex flex-row">
+                <li className="text-[8px] list-none lg:text-sm">
+                  {data.genre}
+                </li>
+                <li className="text-[10px] lg:text-sm ml-4">{data.duration}</li>
+              </ul>
             </div>
           </div>
         </div>
