@@ -14,10 +14,14 @@ export default async function handler(
   try {
     await serverAuth(req, res);
 
-    const movieCount = await prismadb.movie.count();
-    const randomIndex = Math.floor(Math.random() * movieCount);
+    const randomIndex = Math.floor(Math.random() * 4);
 
     const randomMovie = await prismadb.movie.findMany({
+      where: {
+        videoUrl: {
+          startsWith: "https://commondatastorage",
+        },
+      },
       take: 1,
       skip: randomIndex,
     });

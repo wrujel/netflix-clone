@@ -1,6 +1,5 @@
 import type { NextPage, NextPageContext } from "next";
-import { getSession, signOut } from "next-auth/react";
-import useCurrentUser from "../hooks/useCurrentUser";
+import { getSession } from "next-auth/react";
 import Navbar from "../components/Navbar";
 import Billboard from "../components/Billboard";
 import MovieList from "../components/MovieList";
@@ -27,7 +26,7 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 const Home: NextPage = () => {
-  const { data: movies = [] } = useMovies();
+  const { actionList, scifiList, otherList } = useMovies();
   const { data: favorites = [] } = useFavorites();
   const { isOpen, closeModal } = useInfoModal();
 
@@ -37,8 +36,10 @@ const Home: NextPage = () => {
       <Navbar />
       <Billboard />
       <div className="pb-40">
-        <MovieList title="Trending Now" data={movies} />
+        <MovieList title="Action" data={actionList} />
+        <MovieList title="Sci-Fi" data={scifiList} />
         <MovieList title="My List" data={favorites} />
+        <MovieList title="Other" data={otherList} />
       </div>
     </>
   );

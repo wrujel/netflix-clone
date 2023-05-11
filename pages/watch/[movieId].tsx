@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import useMovie from "../../hooks/useMovie";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import ReactPlayer from "react-player";
 
 const Watch = () => {
   const router = useRouter();
@@ -34,12 +35,16 @@ const Watch = () => {
           {data?.title}
         </p>
       </nav>
-      <video
-        autoPlay
+      <ReactPlayer
+        loop
+        playing
+        volume={0.5}
+        muted
         controls
-        src={data?.videoUrl}
-        className="h-full w-full"
-      ></video>
+        url={data?.videoUrl}
+        width={"100%"}
+        height={"100%"}
+      />
     </div>
   );
 };
