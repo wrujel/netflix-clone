@@ -23,80 +23,86 @@
   </a>
   <a href='http://nextjs.org'>
     <img
-      src='https://img.shields.io/badge/Next.js-11.0.1-lightgrey.svg'
+      src='https://img.shields.io/badge/Next.js-11.0.1-blue.svg?style=flat&logo=next.js'
       alt='Next.js'
     />
   </a>
   <a href='https://www.typescriptlang.org/'>
     <img
-      src='https://img.shields.io/badge/Typescript-4.3.5-blue.svg'
+      src='https://img.shields.io/badge/Typescript-4.3.5-blue.svg?style=flat&logo=typescript'
       alt='Typescript'
     />
   </a>
   <a href='https://tailwindcss.com/'>
     <img
-      src='https://img.shields.io/badge/Tailwind%20CSS-2.2.4-blue.svg'
+      src='https://img.shields.io/badge/Tailwind%20CSS-2.2.4-blue.svg?style=flat&logo=tailwindcss'
       alt='Tailwind CSS'
     />
   </a>
   <a href='https://reactjs.org/'>
     <img
-      src='https://img.shields.io/badge/React-17.0.2-blue.svg'
+      src='https://img.shields.io/badge/React-17.0.2-blue.svg?style=flat&logo=react'
       alt='React'
     />
   </a>
   <a href='https://lodash.com/'>
     <img
-      src='https://img.shields.io/badge/Lodash-4.17.21-blue.svg'
+      src='https://img.shields.io/badge/Lodash-4.17.21-blue.svg?style=flat&logo=lodash'
       alt='Lodash'
     />
   </a>
   <a href='https://next-auth.js.org/'>
     <img
-      src='https://img.shields.io/badge/Next--Auth-4.0.0-lightgrey.svg'
+      src='https://img.shields.io/badge/Next--Auth-4.0.0-blue.svg?style=flat&logo=next.js'
       alt='Next-Auth'
     />
   </a>
   <a href='https://www.prisma.io/'>
     <img
-      src='https://img.shields.io/badge/Prisma-2.30.1-lightgrey.svg'
+      src='https://img.shields.io/badge/Prisma-2.30.1-blue.svg?style=flat&logo=prisma'
       alt='Prisma'
     />
   </a>
   <a href='https://axios-http.com/'>
     <img
-      src='https://img.shields.io/badge/Axios-0.21.1-blue.svg'
+      src='https://img.shields.io/badge/Axios-0.21.1-blue.svg?style=flat&logo=axios'
       alt='Axios'
     />
   </a>
   <a href='https://react-icons.github.io/react-icons/'>
     <img
-      src='https://img.shields.io/badge/React--Icons-4.2.0-blue.svg'
+      src='https://img.shields.io/badge/React--Icons-4.2.0-blue.svg?style=flat&logo=react'
       alt='React-Icons'
     />
   </a>
   <a href='https://swr.vercel.app/'>
     <img
-      src='https://img.shields.io/badge/SWR-1.0.0-lightgrey.svg'
+      src='https://img.shields.io/badge/SWR-1.0.0-blue.svg?style=flat&logo=next.js'
       alt='SWR'
     />
   </a>
   <a href='https://zustand.surge.sh/'>
     <img
-      src='https://img.shields.io/badge/Zustand-3.5.8-lightgrey.svg'
+      src='https://img.shields.io/badge/Zustand-3.5.8-blue.svg?style=flat&logo=npm'
       alt='Zustand'
     />
   </a>
   <a href='https://www.npmjs.com/package/react-player'>
     <img
-      src='https://img.shields.io/badge/React--Player-2.9.0-blue.svg'
+      src='https://img.shields.io/badge/React--Player-2.9.0-blue.svg?style=flat&logo=npm'
       alt='React-Player'
     />
   </a>
   <a href='https://www.mongodb.com/'>
     <img
-      src='https://img.shields.io/badge/MongoDB-4.4.6-green.svg'
+      src='https://img.shields.io/badge/MongoDB-4.4.6-blue.svg?style=flat&logo=mongodb'
       alt='MongoDB'
+    />
+  </a>
+  <a href='https://vercel.com/'>
+    <img
+      src='https://img.shields.io/badge/Vercel-Deployed-success.svg?style=flat&logo=vercel'
+      alt='Vercel'
     />
   </a>
 </div>
@@ -131,6 +137,7 @@ App inspired by Netflix, built with Next.js, Typescript, Tailwind CSS, Next-Auth
 - [Zustand](https://zustand.surge.sh/)
 - [React-Player](https://www.npmjs.com/package/react-player)
 - [MongoDB](https://www.mongodb.com/)
+- [Vercel](https://vercel.com/)
 
 ## Getting Started
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
