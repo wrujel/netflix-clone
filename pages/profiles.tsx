@@ -1,7 +1,5 @@
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
-import Image from "next/image";
-import avatar from "../public/images/default-blue.png";
 import useCurrentUser from "../hooks/useCurrentUser";
 import { useRouter } from "next/navigation";
 import Avatar from "../components/Avatar";
