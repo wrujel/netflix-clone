@@ -1,5 +1,5 @@
 <div align='center'>
-  <h1>Netflix App with Typescript</h1>
+  <h1>Netflix App with Next</h1>
 </div>
 
 <div align='center'>
@@ -174,4 +174,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Demo
-You can check out the demo [here](https://movies-app-wrujel.vercel.app/auth)
+You can check out the demo [here](https://movies-app-wrujel.vercel.app/)
