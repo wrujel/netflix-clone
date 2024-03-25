@@ -44,7 +44,7 @@
   [Demo](https://movies-app-wrujel.vercel.app/) · [Report issue](/issues) · [Suggest something](/issues)
 </div>
 
-### Table of Contents
+## Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
