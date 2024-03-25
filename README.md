@@ -2,11 +2,10 @@
 
   [![Deploy][deploy-active]](/) 
   [![Tests][tests-passed]](/) 
-  [![Buy me a coffee][buy-me-a-coffee]](buy-me-a-coffee-link)
+  [![Buy me a coffee][buy-me-a-coffee]][buy-me-a-coffee-link]
 
 </div>
 
-<br/>
 <div align='center'>
   <a href='/'>
     <img
@@ -22,20 +21,20 @@
 
 <div align='center'>
 
-  [![Nextjs][nextjs]](nextjs-link)
-  [![Typescript][typescript]](typescript-link)
-  [![Tailwind CSS][tailwindcss]](tailwindcss-link)
-  [![React][react]](react-link)
-  [![Lodash][lodash]](lodash-link)
-  [![Next-Auth][next-auth]](next-auth-link)
-  [![Prisma][prisma]](prisma-link)
-  [![Axios][axios]](axios-link)
-  [![React-Icons][react-icons]](react-icons-link)
-  [![SWR][swr]](swr-link)
-  [![Zustand][zustand]](zustand-link)
-  [![React-Player][react-player]](react-player-link)
-  [![MongoDB][mongodb]](mongodb-link)
-  [![Vercel][vercel]](vercel-link)
+  [![Nextjs][nextjs]][nextjs-link]
+  [![Typescript][typescript]][typescript-link]
+  [![Tailwind CSS][tailwindcss]][tailwindcss-link]
+  [![React][react]][react-link]
+  [![Lodash][lodash]][lodash-link]
+  [![Next-Auth][next-auth]][next-auth-link]
+  [![Prisma][prisma]][prisma-link]
+  [![Axios][axios]][axios-link]
+  [![React-Icons][react-icons]][react-icons-link]
+  [![SWR][swr]][swr-link]
+  [![Zustand][zustand]][zustand-link]
+  [![React-Player][react-player]][react-player-link]
+  [![MongoDB][mongodb]][mongodb-link]
+  [![Vercel][vercel]][vercel-link]
   
 </div>
 
@@ -43,7 +42,7 @@
 <div align='center'>
   App inspired by Netflix, built with Next.js, Typescript, Tailwind CSS, Next-Auth, Prisma, MongoDB. Shows list of movies, add movies to favorites, play movies and more.
 
-  [Report issue](/issues) · [Suggest something](/issues)
+  [Demo](https://movies-app-wrujel.vercel.app/) · [Report issue](/issues) · [Suggest something](/issues)
 </div>
 
 ### Table of Contents
