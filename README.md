@@ -1,114 +1,136 @@
 <div align='center'>
-  <h1>Netflix App with Next</h1>
+  <a href='/'>
+    <img
+      src='https://img.shields.io/badge/Deploy-Active-success?style=for-the-badge&logoColor=white'
+      alt='Deploy'
+    />
+  </a>
+  <a href='/'>
+    <img
+      src='https://img.shields.io/badge/Test-Passed-success?style=for-the-badge&color=green'
+      alt='Tests'
+    />
+  </a>
+  <a href='https://www.buymeacoffee.com/wrujel'>
+    <img
+      src='https://img.shields.io/badge/Buy%20me%20a%20coffee-FF813F?style=for-the-badge&logo=buy-me-a-coffee'
+      alt='Buy me a coffee'
+    /> 
+  </a>
+  
+  <a href='/'>
+    <img
+      src='/public/images/screenshot.png'
+      alt='Screenshot of the app'
+    />
+  </a>
 </div>
 
 <div align='center'>
-  <a href='/README.md'>
-    <img
-      src='https://img.shields.io/badge/Status-Complete-success.svg'
-      alt='Status'
-    />
-  </a>
-  <a href='/package.json'>
-    <img 
-      src='https://img.shields.io/badge/Version-1.0.0-blue.svg'
-      alt='Version'
-    />
-  </a>
-  <a href='/LICENSE'>
-    <img
-      src='https://img.shields.io/badge/License-MIT-green.svg'
-      alt='License'
-    />
-  </a>
+  <h1>Netflix App with Next</h1>
+</div>
+
+---
+
+<div align='center'>
   <a href='http://nextjs.org'>
     <img
-      src='https://img.shields.io/badge/Next.js-11.0.1-blue.svg?style=flat&logo=next.js'
+      src='https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js'
       alt='Next.js'
     />
   </a>
   <a href='https://www.typescriptlang.org/'>
     <img
-      src='https://img.shields.io/badge/Typescript-4.3.5-blue.svg?style=flat&logo=typescript'
+      src='https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue'
       alt='Typescript'
     />
   </a>
   <a href='https://tailwindcss.com/'>
     <img
-      src='https://img.shields.io/badge/Tailwind%20CSS-2.2.4-blue.svg?style=flat&logo=tailwindcss'
+      src='https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white'
       alt='Tailwind CSS'
     />
   </a>
   <a href='https://reactjs.org/'>
     <img
-      src='https://img.shields.io/badge/React-17.0.2-blue.svg?style=flat&logo=react'
+      src='https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white'
       alt='React'
     />
   </a>
   <a href='https://lodash.com/'>
     <img
-      src='https://img.shields.io/badge/Lodash-4.17.21-blue.svg?style=flat&logo=lodash'
+      src='https://img.shields.io/badge/Lodash-gray?style=for-the-badge&logo=lodash'
       alt='Lodash'
     />
   </a>
   <a href='https://next-auth.js.org/'>
     <img
-      src='https://img.shields.io/badge/Next--Auth-4.0.0-blue.svg?style=flat&logo=next.js'
+      src='https://img.shields.io/badge/Next--Auth-black?style=for-the-badge&logo=next.js'
       alt='Next-Auth'
     />
   </a>
   <a href='https://www.prisma.io/'>
     <img
-      src='https://img.shields.io/badge/Prisma-2.30.1-blue.svg?style=flat&logo=prisma'
+      src='https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white'
       alt='Prisma'
     />
   </a>
   <a href='https://axios-http.com/'>
     <img
-      src='https://img.shields.io/badge/Axios-0.21.1-blue.svg?style=flat&logo=axios'
+      src='https://img.shields.io/badge/Axios-56A7F7?style=for-the-badge&logo=axios&logoColor=white'
       alt='Axios'
-    />
+    /> 
   </a>
   <a href='https://react-icons.github.io/react-icons/'>
     <img
-      src='https://img.shields.io/badge/React--Icons-4.2.0-blue.svg?style=flat&logo=react'
+      src='https://img.shields.io/badge/React--Icons-61DAFB?style=for-the-badge&logo=react&logoColor=white'
       alt='React-Icons'
     />
   </a>
   <a href='https://swr.vercel.app/'>
     <img
-      src='https://img.shields.io/badge/SWR-1.0.0-blue.svg?style=flat&logo=next.js'
+      src='https://img.shields.io/badge/SWR-black?style=for-the-badge&logo=next.js'
       alt='SWR'
     />
   </a>
   <a href='https://zustand.surge.sh/'>
     <img
-      src='https://img.shields.io/badge/Zustand-3.5.8-blue.svg?style=flat&logo=npm'
+      src='https://img.shields.io/badge/Zustand-gray?style=for-the-badge&logo=npm'
       alt='Zustand'
     />
   </a>
   <a href='https://www.npmjs.com/package/react-player'>
     <img
-      src='https://img.shields.io/badge/React--Player-2.9.0-blue.svg?style=flat&logo=npm'
+      src='https://img.shields.io/badge/React--Player-gray?style=for-the-badge&logo=npm'
       alt='React-Player'
     />
   </a>
   <a href='https://www.mongodb.com/'>
     <img
-      src='https://img.shields.io/badge/MongoDB-4.4.6-blue.svg?style=flat&logo=mongodb'
+      src='https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white'
       alt='MongoDB'
     />
   </a>
   <a href='https://vercel.com/'>
     <img
-      src='https://img.shields.io/badge/Vercel-Deployed-success.svg?style=flat&logo=vercel'
+      src='https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white'
       alt='Vercel'
     />
   </a>
 </div>
-<br />
+<br/>
+<div align='center'>
+  App inspired by Netflix, built with Next.js, Typescript, Tailwind CSS, Next-Auth, Prisma, MongoDB. Shows list of movies, add movies to favorites, play movies and more.
 
-App inspired by Netflix, built with Next.js, Typescript, Tailwind CSS, Next-Auth, Prisma, MongoDB. Shows list of movies, add movies to favorites, play movies and more.
+  [Report issue](/issues) · [Suggest something](/issues)
+</div>
+
+### Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Learn More](#learn-more)
+- [Demo](#demo)
 
 ## Features
 - Authentication with Next-Auth
@@ -166,12 +188,6 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Demo
 You can check out the demo [here](https://movies-app-wrujel.vercel.app/)
