@@ -1,23 +1,13 @@
 <div align='center'>
-  <a href='/'>
-    <img
-      src='https://img.shields.io/badge/Deploy-Active-success?style=for-the-badge&logoColor=white'
-      alt='Deploy'
-    />
-  </a>
-  <a href='/'>
-    <img
-      src='https://img.shields.io/badge/Test-Passed-success?style=for-the-badge&color=green'
-      alt='Tests'
-    />
-  </a>
-  <a href='https://www.buymeacoffee.com/wrujel'>
-    <img
-      src='https://img.shields.io/badge/Buy%20me%20a%20coffee-FF813F?style=for-the-badge&logo=buy-me-a-coffee'
-      alt='Buy me a coffee'
-    /> 
-  </a>
-  
+
+  [![Deploy][deploy-active]](/) 
+  [![Tests][tests-passed]](/) 
+  [![Buy me a coffee][buy-me-a-coffee]](buy-me-a-coffee-link)
+
+</div>
+
+<br/>
+<div align='center'>
   <a href='/'>
     <img
       src='/public/images/screenshot.png'
@@ -30,94 +20,25 @@
   <h1>Netflix App with Next</h1>
 </div>
 
----
-
 <div align='center'>
-  <a href='http://nextjs.org'>
-    <img
-      src='https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js'
-      alt='Next.js'
-    />
-  </a>
-  <a href='https://www.typescriptlang.org/'>
-    <img
-      src='https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue'
-      alt='Typescript'
-    />
-  </a>
-  <a href='https://tailwindcss.com/'>
-    <img
-      src='https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white'
-      alt='Tailwind CSS'
-    />
-  </a>
-  <a href='https://reactjs.org/'>
-    <img
-      src='https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white'
-      alt='React'
-    />
-  </a>
-  <a href='https://lodash.com/'>
-    <img
-      src='https://img.shields.io/badge/Lodash-gray?style=for-the-badge&logo=lodash'
-      alt='Lodash'
-    />
-  </a>
-  <a href='https://next-auth.js.org/'>
-    <img
-      src='https://img.shields.io/badge/Next--Auth-black?style=for-the-badge&logo=next.js'
-      alt='Next-Auth'
-    />
-  </a>
-  <a href='https://www.prisma.io/'>
-    <img
-      src='https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white'
-      alt='Prisma'
-    />
-  </a>
-  <a href='https://axios-http.com/'>
-    <img
-      src='https://img.shields.io/badge/Axios-56A7F7?style=for-the-badge&logo=axios&logoColor=white'
-      alt='Axios'
-    /> 
-  </a>
-  <a href='https://react-icons.github.io/react-icons/'>
-    <img
-      src='https://img.shields.io/badge/React--Icons-61DAFB?style=for-the-badge&logo=react&logoColor=white'
-      alt='React-Icons'
-    />
-  </a>
-  <a href='https://swr.vercel.app/'>
-    <img
-      src='https://img.shields.io/badge/SWR-black?style=for-the-badge&logo=next.js'
-      alt='SWR'
-    />
-  </a>
-  <a href='https://zustand.surge.sh/'>
-    <img
-      src='https://img.shields.io/badge/Zustand-gray?style=for-the-badge&logo=npm'
-      alt='Zustand'
-    />
-  </a>
-  <a href='https://www.npmjs.com/package/react-player'>
-    <img
-      src='https://img.shields.io/badge/React--Player-gray?style=for-the-badge&logo=npm'
-      alt='React-Player'
-    />
-  </a>
-  <a href='https://www.mongodb.com/'>
-    <img
-      src='https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white'
-      alt='MongoDB'
-    />
-  </a>
-  <a href='https://vercel.com/'>
-    <img
-      src='https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white'
-      alt='Vercel'
-    />
-  </a>
+
+  [![Nextjs][nextjs]](nextjs-link)
+  [![Typescript][typescript]](typescript-link)
+  [![Tailwind CSS][tailwindcss]](tailwindcss-link)
+  [![React][react]](react-link)
+  [![Lodash][lodash]](lodash-link)
+  [![Next-Auth][next-auth]](next-auth-link)
+  [![Prisma][prisma]](prisma-link)
+  [![Axios][axios]](axios-link)
+  [![React-Icons][react-icons]](react-icons-link)
+  [![SWR][swr]](swr-link)
+  [![Zustand][zustand]](zustand-link)
+  [![React-Player][react-player]](react-player-link)
+  [![MongoDB][mongodb]](mongodb-link)
+  [![Vercel][vercel]](vercel-link)
+  
 </div>
+
 <br/>
 <div align='center'>
   App inspired by Netflix, built with Next.js, Typescript, Tailwind CSS, Next-Auth, Prisma, MongoDB. Shows list of movies, add movies to favorites, play movies and more.
@@ -191,3 +112,40 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Demo
 You can check out the demo [here](https://movies-app-wrujel.vercel.app/)
+
+
+<!-- Badges -->
+[deploy-active]: https://img.shields.io/badge/Deploy-Active-success?style=for-the-badge&logoColor=white
+[tests-passed]: https://img.shields.io/badge/Test-Passed-success?style=for-the-badge&color=green
+[buy-me-a-coffee]: https://img.shields.io/badge/Buy%20me%20a%20coffee-FF813F?style=for-the-badge&logo=buy-me-a-coffee
+[nextjs]: https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js
+[typescript]: https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue
+[tailwindcss]: https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[react]: https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white
+[lodash]: https://img.shields.io/badge/Lodash-gray?style=for-the-badge&logo=lodash
+[next-auth]: https://img.shields.io/badge/Next--Auth-black?style=for-the-badge&logo=next.js
+[prisma]: https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white
+[axios]: https://img.shields.io/badge/Axios-56A7F7?style=for-the-badge&logo=axios&logoColor=white
+[react-icons]: https://img.shields.io/badge/React--Icons-61DAFB?style=for-the-badge&logo=react&logoColor=white
+[swr]: https://img.shields.io/badge/SWR-black?style=for-the-badge&logo=next.js
+[zustand]: https://img.shields.io/badge/Zustand-gray?style=for-the-badge&logo=npm
+[react-player]: https://img.shields.io/badge/React--Player-gray?style=for-the-badge&logo=npm
+[mongodb]: https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
+[vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
+
+<!-- Badges links -->
+[buy-me-a-coffee-link]: https://www.buymeacoffee.com/wrujel
+[nextjs-link]: https://nextjs.org/
+[typescript-link]: https://www.typescriptlang.org/
+[tailwindcss-link]: https://tailwindcss.com/
+[react-link]: https://reactjs.org/
+[lodash-link]: https://lodash.com/
+[next-auth-link]: https://next-auth.js.org/
+[prisma-link]: https://www.prisma.io/
+[axios-link]: https://axios-http.com/
+[react-icons-link]: https://react-icons.github.io/react-icons/
+[swr-link]: https://swr.vercel.app/
+[zustand-link]: https://zustand.surge.sh/
+[react-player-link]: https://www.npmjs.com/package/react-player
+[mongodb-link]: https://www.mongodb.com/
+[vercel-link]: https://vercel.com/
