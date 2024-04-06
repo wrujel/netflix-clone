@@ -1,4 +1,4 @@
-[demo-link]: https://rest-api-et.onrender.com
+[demo-link]: https://movies-app-wrujel.vercel.app/
 [demo]: https://img.shields.io/badge/🚀Live%20Demo-000000?style=for-the-badge&&logoColor=white&color=0a6bdb
 [tests-passed]: https://img.shields.io/badge/Test-Passed-success?style=for-the-badge&logo=github&logoColor=white&color=green
 [build]: https://img.shields.io/badge/Build-Passing-success?style=for-the-badge&logo=github&logoColor=white&color=green
@@ -51,6 +51,7 @@
 </div>
 
 ## Table of Contents
+- [Table of Contents](#table-of-contents)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
