@@ -1,14 +1,14 @@
-import Image from "next/image";
-import Input from "../components/Input";
-import { useCallback, useState } from "react";
 import axios from "axios";
 import { signIn } from "next-auth/react";
+import Image from "next/image";
+import { useCallback, useState } from "react";
+import Input from "../components/Input";
 
-import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
-import background from "../public/images/hero.jpg";
 import Logo from "../components/Logo";
+import background from "../public/images/hero.jpg";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -91,7 +91,7 @@ const Auth = () => {
                 <Input
                   id="password"
                   label="Password"
-                  type="text"
+                  type="password"
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
                 />
