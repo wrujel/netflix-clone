@@ -146,7 +146,9 @@ const Auth = () => {
                   transition
                 "
               >
-                {isGuestLoading ? "Continuing as Guest..." : "Continue as Guest"}
+                {isGuestLoading
+                  ? "Continuing as Guest..."
+                  : "Continue as Guest"}
               </button>
               <div
                 className="
