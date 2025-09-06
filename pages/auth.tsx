@@ -1,8 +1,10 @@
 import axios from "axios";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Input from "../components/Input";
+import Loading from "../components/Loading";
 
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -17,6 +19,7 @@ const Auth = () => {
 
   const [variant, setVariant] = useState("login");
   const [isGuestLoading, setIsGuestLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const toggleVariant = useCallback(() => {
     setVariant((currentVariant) =>
@@ -24,28 +27,51 @@ const Auth = () => {
     );
   }, []);
 
+  const router = useRouter();
+
+  useEffect(() => {
+    // If navigation starts or completes, clear loading to avoid stale overlay
+    const handleRouteChange = () => {
+      setIsLoading(false);
+      setIsGuestLoading(false);
+    };
+
+    // cleanup on unmount
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("routeChangeError", handleRouteChange);
+    };
+  }, [router.events]);
+
   const login = useCallback(async () => {
     try {
+      setIsLoading(true);
       await signIn("credentials", {
         email,
         password,
         callbackUrl: "/profiles",
       });
+      // Do not setIsLoading(false) here — wait for router event to clear after navigation
     } catch (error: any) {
+      // on error, clear loading so the UI is usable again
+      setIsLoading(false);
       throw new Error(error);
     }
   }, [email, password]);
 
   const register = useCallback(async () => {
     try {
+      setIsLoading(true);
       await axios.post("/api/register", {
         email,
         name,
         password,
       });
 
-      login();
+      await login();
+      // loading will be cleared after route change
     } catch (error: any) {
+      setIsLoading(false);
       throw new Error(error);
     }
   }, [email, name, password, login]);
@@ -53,6 +79,7 @@ const Auth = () => {
   const guestLogin = useCallback(async () => {
     try {
       setIsGuestLoading(true);
+      setIsLoading(true);
       const response = await axios.post("/api/guest");
 
       const { email: guestEmail, password: guestPassword } = response.data;
@@ -62,10 +89,11 @@ const Auth = () => {
         password: guestPassword,
         callbackUrl: "/profiles",
       });
+      // loading cleared on route change
     } catch (error: any) {
       console.error(error);
-    } finally {
       setIsGuestLoading(false);
+      setIsLoading(false);
     }
   }, []);
 
@@ -118,6 +146,7 @@ const Auth = () => {
               </div>
               <button
                 onClick={variant === "login" ? login : register}
+                disabled={isLoading}
                 className="
                   bg-red-600
                   py-3
@@ -130,7 +159,13 @@ const Auth = () => {
                   translate-y-0.5
                 "
               >
-                {variant === "login" ? "Login" : "Sign up"}
+                {isLoading
+                  ? variant === "login"
+                    ? "Signing in..."
+                    : "Creating account..."
+                  : variant === "login"
+                  ? "Login"
+                  : "Sign up"}
               </button>
               <button
                 onClick={guestLogin}
@@ -210,6 +245,9 @@ const Auth = () => {
           </div>
         </div>
       </div>
+      {isLoading && (
+        <Loading message={variant === "login" ? "Signing in" : "Processing"} />
+      )}
     </>
   );
 };
