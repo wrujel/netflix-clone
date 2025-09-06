@@ -16,6 +16,7 @@ const Auth = () => {
   const [password, setPassword] = useState("");
 
   const [variant, setVariant] = useState("login");
+  const [isGuestLoading, setIsGuestLoading] = useState(false);
 
   const toggleVariant = useCallback(() => {
     setVariant((currentVariant) =>
@@ -48,6 +49,25 @@ const Auth = () => {
       throw new Error(error);
     }
   }, [email, name, password, login]);
+
+  const guestLogin = useCallback(async () => {
+    try {
+      setIsGuestLoading(true);
+      const response = await axios.post("/api/guest");
+
+      const { email: guestEmail, password: guestPassword } = response.data;
+
+      await signIn("credentials", {
+        email: guestEmail,
+        password: guestPassword,
+        callbackUrl: "/profiles",
+      });
+    } catch (error: any) {
+      console.error(error);
+    } finally {
+      setIsGuestLoading(false);
+    }
+  }, []);
 
   return (
     <>
@@ -111,6 +131,22 @@ const Auth = () => {
                 "
               >
                 {variant === "login" ? "Login" : "Sign up"}
+              </button>
+              <button
+                onClick={guestLogin}
+                disabled={isGuestLoading}
+                className="
+                  bg-neutral-700
+                  py-3
+                  text-white
+                  rounded-md
+                  w-full
+                  mt-4
+                  hover:opacity-90
+                  transition
+                "
+              >
+                {isGuestLoading ? "Continuing as Guest..." : "Continue as Guest"}
               </button>
               <div
                 className="
