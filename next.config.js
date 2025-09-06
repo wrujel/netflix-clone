@@ -9,6 +9,7 @@ const nextConfig = {
       "mango.blender.org",
       "download.blender.org",
       "www.themoviedb.org",
+      "resizing.flixster.com",
     ],
   },
 };
