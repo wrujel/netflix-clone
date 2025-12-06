@@ -22,6 +22,7 @@ const Billboard = () => {
           brightness-[60%]
         "
         autoPlay
+        playsInline
         muted
         loop
         poster={data?.thumbnailUrl}
