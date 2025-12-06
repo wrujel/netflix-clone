@@ -14,7 +14,14 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const { openModal } = useInfoModal();
 
   return (
-    <div className="group bg-zin-900 col-span relative h-[12vw]">
+    <div
+      className="group bg-zin-900 col-span relative h-[12vw]"
+      onClick={() => {
+        if (window.innerWidth < 640) {
+          router.push(`/watch/${data?.id}`);
+        }
+      }}
+    >
       <Image
         className="
           cursor-pointer
@@ -53,7 +60,6 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           scale-0
           group-hover:scale-110
           group-hover:-translate-y-[6vw]
-          
           group-hover:opacity-100
         "
       >
