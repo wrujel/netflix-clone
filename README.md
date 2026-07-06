@@ -43,7 +43,7 @@
 <div align='center'>
   App inspired by Netflix, built with Next.js, TypeScript, Tailwind CSS, Next-Auth, Prisma, and MongoDB. Browse a list of movies, add movies to favorites, play movies, and more.
 
-  [Demo]({{DEMO_URL}}) · [Report issue](/issues) · [Suggest something](/issues)
+  [Demo][demo-link] · [Report issue](/issues) · [Suggest something](/issues)
 </div>
 
 ## Table of Contents
