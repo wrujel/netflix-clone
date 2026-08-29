@@ -1,3 +1,9 @@
+# A single-package repo, but the file must declare `packages` all the same:
+# pnpm 9 (which Vercel selects for this project by creation date) refuses a
+# config-only workspace file with "packages field missing or empty".
+packages:
+  - '.'
+
 # Dependencies whose install/postinstall scripts are allowed to run.
 # pnpm blocks these by default; each one below is required for the build:
 #   @prisma/client / @prisma/engines / prisma -> download engines + generate the client
@@ -12,8 +18,7 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
 
-# Same list under the pnpm 10 key, so an older pnpm (e.g. a build image that has
-# not caught up) still allows these installs to build.
+# Same list under the pnpm 10 key, so an older build image still allows these.
 onlyBuiltDependencies:
   - '@prisma/client'
   - '@prisma/engines'
