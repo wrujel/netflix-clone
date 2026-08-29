@@ -48,7 +48,7 @@ const Navbar = () => {
           transition
           duration-500
           ease-in-out     
-          ${showBackground ? "bg-zinc-900 bg-opacity-90" : ""}
+          ${showBackground ? "bg-zinc-900/90" : ""}
         `}
       >
         <Logo className="h-4 lg:h-7 w-auto" />

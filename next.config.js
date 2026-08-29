@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
-    domains: [
-      "upload.wikimedia.org",
-      "uhdtv.io",
-      "mango.blender.org",
-      "download.blender.org",
-      "www.themoviedb.org",
-      "resizing.flixster.com",
+    // `images.domains` was removed in Next 16 in favour of remotePatterns.
+    remotePatterns: [
+      { protocol: "https", hostname: "upload.wikimedia.org" },
+      { protocol: "https", hostname: "uhdtv.io" },
+      { protocol: "https", hostname: "mango.blender.org" },
+      { protocol: "https", hostname: "download.blender.org" },
+      { protocol: "https", hostname: "www.themoviedb.org" },
+      { protocol: "https", hostname: "resizing.flixster.com" },
     ],
   },
 };

@@ -36,6 +36,9 @@ const Auth = () => {
       setIsGuestLoading(false);
     };
 
+    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeError", handleRouteChange);
+
     // cleanup on unmount
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
@@ -108,14 +111,14 @@ const Auth = () => {
         />
       </div>
       <div className="relative">
-        <div className="bg-black lg:bg-opacity-50 h-screen">
+        <div className="bg-black lg:bg-black/50 h-screen">
           <nav className="px-12 py-5">
             <div className="w-[200px]">
               <Logo />
             </div>
           </nav>
           <div className="flex justify-center">
-            <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
+            <div className="bg-black/70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
               <h2 className="text-white text-4xl mb-8 font-semibold">
                 {variant === "login" ? "Sign In" : "Register"}
               </h2>

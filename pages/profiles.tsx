@@ -43,8 +43,8 @@ const Profiles = () => {
                 >
                   <div className="w-44 h-44 rounded-full overflow-hidden bg-gradient-to-r from-neutral-700 via-neutral-600 to-neutral-700 animate-pulse shadow-inner" />
                   <div className="mt-4 w-full flex flex-col items-center gap-2">
-                    <div className="h-4 bg-neutral-700 rounded w-36" />
-                    <div className="h-3 bg-neutral-700 rounded w-24" />
+                    <div className="h-4 bg-neutral-700 rounded-sm w-36" />
+                    <div className="h-3 bg-neutral-700 rounded-sm w-24" />
                   </div>
                 </div>
               ) : (

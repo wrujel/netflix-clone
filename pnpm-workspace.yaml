@@ -1,0 +1,21 @@
+# pnpm blocks dependency lifecycle scripts unless they are allowlisted here.
+# These genuinely need theirs:
+#   bcrypt                   - downloads/compiles its native binding
+#   prisma / client / engines - generate the query engine + typed client
+#   unrs-resolver            - native resolver used by eslint-config-next
+#   esbuild                  - vite/vitest's platform binary
+#   sharp                    - next/image's optimizer binary
+allowBuilds:
+  "@prisma/client": true
+  "@prisma/engines": true
+  bcrypt: true
+  esbuild: true
+  prisma: true
+  sharp: true
+  unrs-resolver: true
+
+# deepmerge-ts <8 reaches the Prisma CLI through @prisma/config and carries
+# GHSA-ggr8-5vv4-36mx (stack exhaustion on recursive object graphs). Pull the
+# patched line in so `pnpm audit` reports clean.
+overrides:
+  deepmerge-ts: "^8.0.2"

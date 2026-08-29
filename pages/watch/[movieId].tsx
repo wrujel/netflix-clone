@@ -21,8 +21,7 @@ const Watch = () => {
           flex-row
           items-center
           gap-8
-          bg-black
-          bg-opacity-70
+          bg-black/70
         "
       >
         <AiOutlineArrowLeft
@@ -41,7 +40,7 @@ const Watch = () => {
         volume={0.5}
         muted
         controls
-        url={data?.videoUrl}
+        src={data?.videoUrl}
         width={"100%"}
         height={"100%"}
       />

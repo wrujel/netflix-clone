@@ -72,9 +72,8 @@ const Billboard = () => {
           <button
             onClick={handleOpenModal}
             className="
-              bg-white
+              bg-white/30
               text-white
-              bg-opacity-30
               rounded-md
               py-1 md:py-2
               px-2 md:px-4
@@ -84,7 +83,7 @@ const Billboard = () => {
               flex
               flex-row
               items-center
-              hover:bg-opacity-20
+              hover:bg-white/20
               transition
             "
           >

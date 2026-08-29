@@ -1,6 +1,41 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Tailwind v4 detects sources automatically, but the app's markup lives outside
+   this file's directory — name them explicitly so the scan is deterministic. */
+@source "../pages";
+@source "../components";
+
+/* v4 keeps theme configuration in CSS. These are the keyframes and animations
+   that used to live in tailwind.config.js. */
+@theme {
+  --animate-fade-in: fade-in 220ms ease-out forwards;
+  --animate-bar-1: bar-pulse 900ms cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+  --animate-bar-2: bar-pulse 900ms cubic-bezier(0.2, 0.8, 0.2, 1) infinite 0.12s;
+  --animate-bar-3: bar-pulse 900ms cubic-bezier(0.2, 0.8, 0.2, 1) infinite 0.26s;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bar-pulse {
+    0%,
+    100% {
+      transform: scaleY(0.28) translateY(6px);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scaleY(1.18) translateY(0);
+      opacity: 1;
+    }
+  }
+}
 
 body {
   @apply bg-zinc-900 overflow-x-hidden;

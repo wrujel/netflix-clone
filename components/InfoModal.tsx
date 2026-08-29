@@ -17,6 +17,9 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
   const { data = {} } = useMovie(movieId);
 
   useEffect(() => {
+    // Deliberate: the modal must paint once at scale-0 before flipping to
+    // scale-100, otherwise the CSS enter transition has nothing to animate.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsVisible(!!visible);
   }, [visible]);
 
@@ -35,8 +38,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
         z-50
         transition
         duration-300
-        bg-black
-        bg-opacity-80
+        bg-black/80
         flex
         justify-center
         items-center
@@ -91,8 +93,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                 h-10
                 w-10
                 rounded-full
-                bg-black
-                bg-opacity-70
+                bg-black/70
                 flex
                 items-center
                 justify-center

@@ -26,7 +26,7 @@ const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
           text-white
           bg-neutral-700
           appearance-none
-          focus:outline-none
+          focus:outline-hidden
           focus:ring-0
           peer
   
