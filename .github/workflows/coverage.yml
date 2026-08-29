@@ -1,0 +1,72 @@
+# Unit tests + coverage, reported back to the Content Studio.
+#
+# The studio's scheduler dispatches this daily and then READS this run: its
+# conclusion becomes the project's "unit tests" tag, and the MONITOR_COVERAGE
+# line below becomes its "coverage %" tag and the shields endpoint the studio
+# publishes. Nothing is committed here, no secret is needed, and the README is
+# maintained by the studio — do not add badges to it by hand.
+name: Coverage
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# A newer run supersedes an in-flight one on the same ref — a daily dispatch
+# landing on top of a push must not queue behind it.
+concurrency:
+  group: coverage-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Reads the pnpm version from package.json's `packageManager` field.
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      # `postinstall` runs `prisma generate`; it reads the schema only and needs
+      # no DATABASE_URL, so no secret is required here.
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # json-summary is what the studio parses; lcov is kept for humans, and the
+      # json reporter supplies the pass/fail counts.
+      - name: Run tests with coverage
+        run: pnpm test:ci
+
+      # `always()`: a failing suite still measured something, and the studio
+      # shows the red tag NEXT TO a real percentage.
+      - name: Report to the studio
+        if: always()
+        run: |
+          node -e '
+            const fs = require("fs");
+            let out = null;
+            try {
+              const t = JSON.parse(fs.readFileSync("coverage/coverage-summary.json", "utf8")).total.lines;
+              out = { pct: t.pct, lines: { covered: t.covered, total: t.total } };
+            } catch {}
+            try {
+              const r = JSON.parse(fs.readFileSync(".vitest.json", "utf8"));
+              const tests = {
+                passed: r.numPassedTests | 0,
+                failed: r.numFailedTests | 0,
+                skipped: r.numPendingTests | 0,
+              };
+              out = { ...(out ?? { pct: null }), tests };
+            } catch {}
+            console.log("::notice title=coverage::MONITOR_COVERAGE " + JSON.stringify(out ?? { pct: null }));
+          '
