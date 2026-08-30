@@ -30,7 +30,7 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version: 22
 
       # lockfile-only: no install. `|| true` is load-bearing — pnpm audit
       # exits non-zero when vulns exist, which is the normal case being reported.
