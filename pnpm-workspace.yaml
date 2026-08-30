@@ -33,5 +33,12 @@ minimumReleaseAgeExclude:
 # Transitive security fixes.
 #   deepmerge-ts <8 -> stack exhaustion on recursive graphs (GHSA-ggr8-5vv4-36mx).
 #   Reached through prisma > @prisma/config, which still pins ^7.
+#
+# Deliberately duplicated in package.json under `pnpm.overrides`: overrides
+# moved to this file in pnpm 10, so pnpm 9 -- which is what Vercel resolves
+# here -- only sees the package.json spelling. The lockfile records the
+# override either way, so if the pnpm in use cannot find it the lockfile reads
+# as outdated and the install fails. pnpm 11 warns that it ignores the
+# package.json copy; that warning is expected and the two must stay in sync.
 overrides:
   deepmerge-ts: '^8.0.2'
