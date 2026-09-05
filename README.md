@@ -11,7 +11,7 @@
   <a href='/'>
     <img
       src='screenshot.webp'
-      alt='Screenshot of the app'
+      alt='Netflix clone home page with a full-width Tears of Steel hero, Play and More Info buttons, and an Action row of movie thumbnails below.'
       width='100%'
     />
   </a>
@@ -41,7 +41,7 @@
 </div>
 
 <div align='center'>
-  App inspired by Netflix, built with Next.js, TypeScript, Tailwind CSS, Next-Auth, Prisma, and MongoDB. Browse a list of movies, add movies to favorites, play movies, and more.
+  An app inspired by Netflix, built with Next.js 13, TypeScript, Tailwind CSS, NextAuth, Prisma and MongoDB. Sign in with GitHub, Google or a guest account, browse films grouped by genre beneath a random billboard hero, play any title, and keep a list of favorites.
 
   [Demo][demo-link] · [Report issue](/issues) · [Suggest something](/issues)
 </div>
